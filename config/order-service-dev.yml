@@ -14,11 +14,13 @@ eureka:
 feign:
   hystrix:
     enabled: true
+#暴露 hystrix.stream 监控端点
+#暴露刷新端点
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: refresh
 #配置集群
 ---
 spring:
